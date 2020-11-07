@@ -1,0 +1,32 @@
+{
+  "name": "pairing-test",
+  "version": "1.0.0",
+  "description": "NodeJS & TypeScript skeleton project for Guardian pairing test",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "tsc": "tsc",
+    "watch": "tsc-watch --onSuccess 'node ./dist/index.js' --onFailure 'echo Beep! Compilation Failed' --compiler typescript/bin/tsc"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.0",
+    "@types/node": "^10.12.21",
+    "jest": "23",
+    "ts-jest": "^23.10.5",
+    "tsc-watch": "^1.1.36",
+    "typescript": "^3.3.1"
+  },
+  "dependencies": {
+    
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.ts?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.ts?$",
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ]
+  }
+}
