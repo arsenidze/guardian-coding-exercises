@@ -1,0 +1,56 @@
+keywords:
+
+############################ Entity
+fruit machine
+has 
+    colours: black, white, green, yellow
+    money
+can
+    run: void => status of play
+
+
+makeGameOfChance: 
+    colours = randomColours
+    if all colours equal:
+        gameStatus = JACKPOT
+    else:
+        gameStatus = Nothing
+
+getColours
+getLastGameStatus
+
+############################ Entity
+player 
+can 
+    play with fruit machine
+has 
+    money
+
+play: FruitMachine => Nothing
+    fruitMachine.makeGameOfChance()
+    
+    lastGameStatus = fruitMachine.getLastGameStatus()
+    if lastGameStatus == JACKPOT:
+        
+
+############################ Event
+player plays machine => application display fruit machine colours
+
+
+
+############################ Application scenarios
+Open
+    display fruit machine
+
+User press play button
+    run fruit machine play command
+
+
+player = new Player(amount: 30)
+fruitMachine = new FruitMachine(amount: 30, colours: colours)
+
+use case: user press play button
+    player = getPlayer()
+    fruitMachine = getFruitMachine()
+
+    player.play(fruitMachine)
